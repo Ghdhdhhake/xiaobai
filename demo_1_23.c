@@ -1,26 +1,15 @@
 #include<stdio.h>
-int main()
+int main(void)
 {
-	int n, m;
-	n = 30;
-	while (++n <= 33)
-		printf("%d|", n);
-	n = 30;
-	do
-		printf("%d|",n);
-	while (++n <= 33);
-	printf("\n***\n");
-	for (n = 1; n * n < 200; n += 4)
-		printf("%d\n",n);
-	printf("\n***\n");
-	for (n = 2, m = 6; n < m; n *= 2, m += 2)
-		printf("%d %d",m,n);
-	printf("\n***\n");
-	for (n = 5; n > 0; n--)
-	{
-		for (m = 0; m <= n; m++)
-			printf("=");
-		printf("\n");
-	}
+	int  a[11];
+	for (int i = 0; i < 11; i++) {   //输入数组的元素
+		scanf_s("%d", &a[i]);
+		}
+	if (a[0] != a[1])
+		printf("%d", a[0]);
+	for (int i = 1; i < 11; i++) {
+		if (a[i] != a[i + 1] && a[i] != a[i - 1]) //判断只出现一次的元素
+			printf("%d\n", a[i]);
+		 }
 	return 0;
 }
